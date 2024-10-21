@@ -3,48 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的网站</title>
+    <title>我的网站首页</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            box-sizing: border-box;
         }
         header {
-            background: #007BFF;
-            color: #fff;
-            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
             text-align: center;
         }
         nav {
-            margin: 10px 0;
+            margin: 15px 0;
         }
         nav a {
-            color: #fff;
-            text-decoration: none;
+            color: white;
             margin: 0 15px;
+            text-decoration: none;
         }
-        main {
+        .container {
             padding: 20px;
         }
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
         footer {
+            background-color: #333;
+            color: white;
             text-align: center;
             padding: 10px 0;
-            background: #007BFF;
-            color: #fff;
             position: relative;
             bottom: 0;
             width: 100%;
-            margin-top: 20px;
         }
         @media (max-width: 600px) {
             nav {
-                display: block;
+                display: flex;
+                flex-direction: column;
             }
             nav a {
-                display: block;
                 margin: 5px 0;
             }
         }
@@ -53,22 +58,33 @@
 <body>
 
 <header>
-    <h1>欢迎来到我的网站</h1>
+    <h1>欢迎来到小陆的网站</h1>
     <nav>
-        首页
-        关于我们
-        服务
-        联系
+        关于我
+        性格
+        爱好
     </nav>
 </header>
 
-<main>
-    <h2>这是一个简单的网页示例</h2>
-    <p>这里可以添加一些关于你的网站的介绍或内容。</p >
-</main>
+<div class="container">
+    <section id="about" class="card">
+        <h2>关于我</h2>
+        <p>我是出生于浙江，今年刚在香港读研究生。</p >
+    </section>
+
+    <section id="services" class="card">
+        <h2>性格</h2>
+        <p>我性格开朗，乐于助人。</p >
+    </section>
+
+    <section id="contact" class="card">
+        <h2>爱好</h2>
+        <p>喜欢打台球/跑步，偶尔会打篮球，。</p >
+    </section>
+</div>
 
 <footer>
-    <p>&copy; 2024 我的公司. 保留所有权利。</p >
+    <p>&copy; 2024 越来越好</p >
 </footer>
 
 </body>
